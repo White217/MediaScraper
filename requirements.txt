@@ -1,0 +1,31 @@
+# MediaScraper 依赖清单
+# Python >= 3.10
+
+# HTTP 客户端（异步，用于刮削 API）
+aiohttp>=3.9.0
+
+# SOCKS5 代理支持（core/proxy.py 使用）
+aiohttp-socks>=0.9.0
+
+# HTML 解析（部分 provider 使用）
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# CLI 框架
+click>=8.1.0
+
+# YAML 配置解析
+PyYAML>=6.0
+
+# 磁盘缓存
+diskcache>=5.6.0
+
+# WebP 封面转 JPEG
+Pillow>=10.0.0
+
+# GUI 框架（阶段 6 需要）
+PySide6>=6.6.0
+
+# 测试
+pytest>=7.0
+pytest-asyncio>=0.21
