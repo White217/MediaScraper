@@ -1,0 +1,15 @@
+---
+description: MediaScraper 版本号递增规则（bugfix 只动末位）
+alwaysApply: true
+---
+
+# 版本号规则
+
+格式：`主.次.修订.补丁`（当前如 `1.0.8.1`）
+
+- **Bug 修复**：只增加最后一位（补丁号），例如 `1.0.8.0` → `1.0.8.1`
+- **功能/前面任一段升级**：升高对应位后，**最后一位从 0 重新开始**，例如 `1.0.8.3` → `1.0.9.0` 或 `1.1.0.0`
+- 发版时同步更新：
+  - `media_scraper/version.py` 的 `__version__`
+  - `media_scraper/version_info.txt` 的 `filevers` / `prodvers` / `FileVersion` / `ProductVersion`
+  - `media_scraper/README.md` 当前版本与版本说明表
